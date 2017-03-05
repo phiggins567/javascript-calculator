@@ -4,15 +4,15 @@ $(document).ready(function() {
   var operator = "";
   var total = "0";
   var display = $("#display");
-  
+  var operatorButton =  $("#operators button");
 
-  $("#operators button").prop("disabled", true);
+  operatorButton.prop("disabled", true);
   
   $("#clearall").click(function() {
       number = "";
       newnumber = "";
       display.html("0");
-    $("#operators button").prop("disabled", true);
+    operatorButton.prop("disabled", true);
   });
   
   $("#clear").click(function() {
@@ -24,17 +24,17 @@ $(document).ready(function() {
     number += $(this).html();
     strLength(number);
 
-    $("#operators button").not("#equals").prop("disabled", false);
+    operatorButton.not("#equals").prop("disabled", false);
   });
   
-  $("#operators button").not("#equals").click(function() {
+  operatorButton.not("#equals").click(function() {
     operator = $(this).html();
     newnumber = number;
     number = "";
     display.html(operator);
   });
   
-  $("#operators button").not("#equals").click(function() {
+  operatorButton.not("#equals").click(function() {
     $("#equals").prop("disabled", false);
   });
   
@@ -69,7 +69,7 @@ $(document).ready(function() {
       if (a.length > 7) {
           display.html("Err");
           number = "";
-          $("#operators button").prop("disabled", true);
+          operatorButton.prop("disabled", true);
       } else {
           display.html(a);
       }
