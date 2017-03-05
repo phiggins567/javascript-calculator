@@ -22,7 +22,8 @@ $(document).ready(function() {
   
   $("#numbers button").not("#clear, #clearall").click(function(){
     number += $(this).html();
-    $("#display").html(number);
+    strLength(number);
+
     $("#operators button").not("#equals").prop("disabled", false);
   });
   
@@ -55,7 +56,7 @@ $(document).ready(function() {
           break;
     }
     total = newnumber.toString();
-    display.html(total);
+    strLength(total);
     number = newnumber;
     newnumber = "";
 
@@ -64,5 +65,14 @@ $(document).ready(function() {
   
   display.html(total);
   
+  function strLength(a) {
+      if (a.length > 7) {
+          display.html("Err");
+          number = "";
+          $("#operators button").prop("disabled", true);
+      } else {
+          display.html(a);
+      }
+  }
   
 });
