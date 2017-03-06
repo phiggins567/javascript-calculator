@@ -28,7 +28,7 @@ $(document).ready(function() {
   });
   
   operatorButton.not("#equals").click(function() {
-    operator = $(this).html();
+    operator = $(this).val();
     newnumber = number;
     number = "";
     display.html(operator);
