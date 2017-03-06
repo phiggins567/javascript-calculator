@@ -4,7 +4,7 @@ $(document).ready(function() {
   var operator = "";
   var total = "0";
   var display = $("#display");
-  var operatorButton =  $("#operators button");
+  var operatorButton =  $(".operators");
 
   operatorButton.prop("disabled", true);
   
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $("#display").html(number);
   });
   
-  $("#numbers button").not("#clear, #clearall").click(function(){
+  $(".numbers").click(function(){
     number += $(this).html();
     strLength(number);
 
@@ -32,6 +32,7 @@ $(document).ready(function() {
     newnumber = number;
     number = "";
     display.html(operator);
+    operatorButton.prop("disabled", true);
   });
   
   operatorButton.not("#equals").click(function() {
