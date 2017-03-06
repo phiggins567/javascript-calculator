@@ -3,6 +3,7 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
 }
 .flexbox-container {
   display: flex;
@@ -12,16 +13,25 @@ body {
 .calculator {
   width: 300px;
   margin-top: 30px;
-  border: solid 1px #000000;
+  border: solid 2px #d7d7d7;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 #display {
   width: auto;
   margin: 5px;
+  padding: 5px;
   height: 60px;
-  border: solid 1px #000000;
+  border: solid 2px #d7d7d7;
+  background-color: #fafafa;
   font-size: 32px;
   text-align: right;
   font-weight: bold;
+  -webkit-box-shadow: inset -2px 2px 5px 0px rgba(215,215,215,1);
+-moz-box-shadow: inset -2px 2px 5px 0px rgba(215,215,215,1);
+box-shadow: inset -2px 2px 5px 0px rgba(215,215,215,1);
+
 }
 button {
   
