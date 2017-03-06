@@ -55,6 +55,9 @@ $(document).ready(function() {
         case "/":
         newnumber /= number;
           break;
+          case "%":
+        newnumber /= 100;
+          break;
     }
     total = newnumber.toString();
     strLength(total);
@@ -67,7 +70,7 @@ $(document).ready(function() {
   display.html(total);
   
   function strLength(a) {
-      if (a.length > 7) {
+      if (a.length > 10) {
           display.html("Err");
           number = "";
           operatorButton.prop("disabled", true);
